@@ -3,7 +3,6 @@
   This is the minimal bumble-build Gruntfile.   You can tweek what BumbleBuild 
   returns below to customize 
 ###
-_ = require 'underscore'
 
 BumbleBuild = require('bumble-build')
 

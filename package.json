@@ -2,9 +2,10 @@
   "name": "git-status-utils",
   "version": "0.1.1",
   "description": "javascript utilities for parsing information from git status command",
-  "main": "index.js",
+  "main": "lib/git-status-utils",
   "scripts": {
-    "test": "grunt test"
+    "test": "grunt test",
+    "prepublish": "grunt build"
   },
   "repository": {
     "type": "git",
