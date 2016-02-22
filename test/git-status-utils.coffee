@@ -106,3 +106,23 @@ describe "GitStatusUtils", ->
       GitStatusUtils._fetchStatus.restore()
       
 
+  describe "when parsing output with no origin and changed files", ->
+    before ->
+      testInputData = Fs.readFileSync(Path.join(__dirname, 'data', 'gitStatusNoOriginChangedFiles.txt')).toString()
+      Sinon.stub GitStatusUtils, "_fetchStatus", => testInputData
+      @parsedStatus = GitStatusUtils.getStatus("./")
+
+    it "should have parsed expected attributes", ->
+      expected = 
+        branch: "development"
+        remote: undefined
+        commitsAheadBehind: 0
+      @parsedStatus.should.containSubset expected
+      
+    it "should have found one unstaged changes", ->
+      @parsedStatus.unstagedChanges.length.should.equal 1
+            
+    it "should have found 3 untracked files", ->
+      @parsedStatus.untrackedFiles.length.should.equal 3
+
+  

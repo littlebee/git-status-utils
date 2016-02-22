@@ -67,19 +67,24 @@ module.exports = class GitStatusUtils
     lines = rawOutput.split('\n')
     
     # console.log "_parseGitStatus", lines
-    
     [match, branch] = matches = lines[0].match /On branch (.*)/i
-    #console.log "line:", lines[0], 'matches:', matches
-
-    matches = lines[1].match(/branch is (up to date|[^\s]*)\s*(of|with)?\s*[\'\"]([^\'\"]*)[\'\"](\s*by (\d*) commit)?/i)
+    if matches?.length > 0
+      branch = matches[1]
+      lines = lines.slice(1)
+    else
+      branch = null  
+    
+    matches = lines[0].match(/branch is (up to date|[^\s]*)\s*(of|with)?\s*[\'\"]([^\'\"]*)[\'\"](\s*by (\d*) commit)?/i)
     #console.log "line:", lines[1], 'matches:', matches
     if matches?
       [match, status, ofWith, remote, affix, commitCount] = matches
-    
-    commitsOff = switch status
-      when 'ahead' then parseInt(commitCount)
-      when 'behind' then parseInt(commitCount) * -1
-      else 0
+      lines = lines.slice(1)
+      commitsOff = switch status
+        when 'ahead' then parseInt(commitCount)
+        when 'behind' then parseInt(commitCount) * -1
+        else 0
+    else
+      commitsOff = 0
     
     statusOut = {
       branch: branch
@@ -91,7 +96,7 @@ module.exports = class GitStatusUtils
     }
     # console.log 'statusOut', statusOut
     currentFileBlock = null
-    for line in lines.slice(2)
+    for line in lines
       isNewFileBlock = false
       line = Str.trim(line, all: true)
       for fileBlock in @FILE_BLOCKS
