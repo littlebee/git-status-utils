@@ -1,6 +1,6 @@
 {
   "name": "git-status-utils",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "javascript utilities for parsing information from git status command",
   "main": "lib/git-status-utils",
   "scripts": {
