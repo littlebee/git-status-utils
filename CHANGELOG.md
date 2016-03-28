@@ -1,7 +1,8 @@
 ## [0.3.0](https://github.com/littlebee/git-status-utils.git/compare/0.2.0...0.3.0) (2016-03-87)
-the spam release!  
+
 
 ### Other Commits
+* [e646e62](https://github.com/littlebee/git-status-utils.git/commit/e646e6294e6635383c6df5802ce4e6ef9b51efac) updated changelog via atom:publish
 * [6748a0f](https://github.com/littlebee/git-status-utils.git/commit/6748a0fbf798774928b736c5ad4ffa08f552d89f) updated changelog via atom:publish
 * [c546fb8](https://github.com/littlebee/git-status-utils.git/commit/c546fb85b0ab17dcb1b28c8b54330c032812b7a0) updated changelog via atom:publish
 * [a380c65](https://github.com/littlebee/git-status-utils.git/commit/a380c65cb48d84b19c69d6a0316ecf852b34b957) updated changelog via atom:publish
