@@ -46,9 +46,8 @@ module.exports = class GitStatusUtils
       
   @_fetchStatus: (directory) ->
     flags = ""
-    cmd = "cd #{directory} && git status#{flags}"
-    # console.log '$ ' + cmd
-    return ChildProcess.execSync(cmd, {stdio: 'pipe' }).toString()
+    cmd = "git status#{flags}"
+    return ChildProcess.execSync(cmd, {stdio: 'pipe', cwd: directory}).toString()
     
 
   @FILE_BLOCKS: [{
