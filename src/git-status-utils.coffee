@@ -32,10 +32,10 @@ module.exports = class GitStatusUtils
       ]
     }
     ```
-    Not that remote and commitsAheadBehind are not always given by git status, for example, 
+    Note that remote and commitsAheadBehind are not always given by git status, for example, 
     files a local branch with no tracking remote
   ###
-  @getStatus: (dirName) ->
+  @getStatus: (dirName='.') ->
     rawStatus = @_fetchStatus(dirName)
     return @_parseGitStatus(rawStatus)
     
