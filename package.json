@@ -5,7 +5,7 @@
   "main": "lib/git-status-utils",
   "scripts": {
     "test": "grunt test",
-    "prepublish": "grunt build"
+    "prepublishOnly": "grunt build"
   },
   "repository": {
     "type": "git",
