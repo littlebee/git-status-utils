@@ -1,0 +1,11 @@
+.idea
+node_modules/
+coverage/
+assets
+build
+.lastNpmInstall
+watch.pid
+coffee.log
+tags
+/src/
+/docs/
