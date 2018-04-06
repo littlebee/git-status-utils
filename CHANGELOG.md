@@ -1,3 +1,10 @@
+## [0.3.1](https://github.com/littlebee/git-status-utils.git/compare/0.3.0...0.3.1) (2018-04-5)
+
+
+### Other Commits
+* [a758775](https://github.com/littlebee/git-status-utils.git/commit/a758775421bfdab5a301f2fdac92ae3b5821d839) default dirname on call to getStatus()
+* [d39f469](https://github.com/littlebee/git-status-utils.git/commit/d39f469f58970503cbeca30ec4249ebbf0f2b32f) replace faulty `cd ...` with using cwd on child_process for better handling on windows and with spaces in path
+
 ## [0.3.0](https://github.com/littlebee/git-status-utils.git/compare/0.2.0...0.3.0) (2016-03-87)
 
 
