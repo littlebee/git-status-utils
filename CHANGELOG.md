@@ -1,3 +1,9 @@
+## [0.3.2](https://github.com/littlebee/git-status-utils.git/compare/0.3.1...0.3.2) (2018-04-5)
+
+
+### Other Commits
+* [9201db8](https://github.com/littlebee/git-status-utils.git/commit/9201db85b781f9df344e7d52ed82e84d580c12d0) update prepublish script to make newer npm happy
+
 ## [0.3.1](https://github.com/littlebee/git-status-utils.git/compare/0.3.0...0.3.1) (2018-04-5)
 
 
